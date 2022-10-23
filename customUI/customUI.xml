@@ -5,7 +5,7 @@
 			<tab id="Tab-EasyExporter1" label="EasyExporter">
 				<group id="GR-Slide" label="Export Slide">
 					<button id="Btn-PDF1" label="PDF (*_1x1.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPdf_1x1" />
-					<button id="Btn-PDF2" label="PDF (*_3x2.pdf)" imageMso="FileSaveAsPdfOrXps" size="normal" onAction="ExportSlidesToPdf_3x2" />
+					<button id="Btn-PDF2" label="PDF (*_3x2.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPdf_3x2" />
 					<separator id="separator1" />
 					<button id="Btn-PNG1" label="PNG (*_p??.png)" imageMso="PastePng" size="normal" onAction="ExportSlidesToPNGs" />
 					<button id="Btn-JPG1" label="JPEG (*_p??.jpg)" imageMso="PasteJpeg" size="normal" onAction="ExportSlidesToJPEGs" />
