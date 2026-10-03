@@ -3,26 +3,39 @@
 	<ribbon startFromScratch="false">
 		<tabs>
 			<tab id="Tab-EasyExporter1" label="EasyExporter">
-				<group id="GR-Slide" label="Export Slide">
-					<button id="Btn-PDF1" label="PDF (*_1x1.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPdf_1x1" />
-					<button id="Btn-PDF2" label="PDF (*_3x2.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPdf_3x2" />
+				<group id="GR-Slide" label="Export Slides">
+					<button id="Btn-PDF2x1" label="PDF (*_2x1.pdf)" imageMso="SendPdf" size="large" onAction="ExportSlidesToPdf_2x1" />
+					<button id="Btn-PDF1x1" label="PDF (*_1x1.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPdf_1x1" />
+					<button id="Btn-PDF2x2" label="PDF (*_2x2.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPdf_2x2" />
+					<button id="Btn-PDF3x2" label="PDF (*_3x2.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPdf_3x2" />
 					<dropDown id="ListPdfQuality" label="Quality:" getSelectedItemIndex="ListPdfQuality_getSelectedItemIndex" onAction="ListPdfQuality_onAction">
 						<item id="print" label="Print (High-Q)" />
 						<item id="screen" label="Screen (Low-Q)" />
 					</dropDown>
+					<checkBox id="frameSlides" label="Frame slides"
+						screentip="Whether the slides to be exported should be bordered by a frame."
+						getPressed="ExporterConfig.Chcekbox_getPressed"
+						onAction="ExporterConfig.Chcekbox_onAction" />
+					<checkBox id="hiddenSlides" label="Include hidden slides"
+						screentip="Whether to print hidden slides."
+						getPressed="ExporterConfig.Chcekbox_getPressed"
+						onAction="ExporterConfig.Chcekbox_onAction" />
 					<separator id="separator1" />
-					<button id="Btn-PNG1" label="PNG (*_p??.png)" imageMso="PastePng" size="normal" onAction="ExportSlidesToPNGs" />
-					<button id="Btn-JPG1" label="JPEG (*_p??.jpg)" imageMso="PasteJpeg" size="normal" onAction="ExportSlidesToJPEGs" />
 				</group>
-				<group id="GR-Shape" label="Export Shape">
-					<button id="Btn-Shape-PNG1" label="PNG (*_????.png" imageMso="PastePng" size="normal" onAction="ExportSelectedShapeToPNG" />
-					<button id="Btn-Shape-JPG1" label="JPEG (*_????.jpg" imageMso="PasteJpeg" size="normal" onAction="ExportSelectedShapeToJPEG" />
+				<group id="GR-Slide2" label="Export Slide (Imagefile)">
+					<button id="Btn-PNG1" label="PNG (*_p??.png)" imageMso="PastePng" size="large" onAction="ExportSlidesToPNGs" />
+					<button id="Btn-JPG1" label="JPEG (*_p??.jpg)" imageMso="PasteJpeg" size="normal" onAction="ExportSlidesToJPEGs" />
+					<button id="Btn-EMF1" label="EMF (*_p??.emf)" imageMso="SaveAsEmf" size="normal" onAction="ExportSlidesToEMFs" />
+					<button id="Btn-PDF1" label="PDF (*_p??.pdf)" imageMso="SendPdf" size="normal" onAction="ExportSlidesToPDFs" />
+					<!-- <button id="Btn-SVG1" label="SVG (*_p??.svg)" imageMso="SaveAsSvg" size="normal" onAction="ExportSlidesToSVGs" /> -->
+				</group>
+				<group id="GR-Shape" label="Export Shape (Imagefile)">
+					<button id="Btn-Shape-PNG1" label="PNG (*_????.png)" imageMso="PastePng" size="large" onAction="ExportSelectedShapeToPNG" />
+					<button id="Btn-Shape-JPG1" label="JPEG (*_????.jpg)" imageMso="PasteJpeg" size="normal" onAction="ExportSelectedShapeToJPEG" />
+					<button id="Btn-Shape-EMF1" label="EMF (*_????.emf)" imageMso="SaveAsEmf" size="normal" onAction="ExportSelectedShapeToEMF" />
+					<button id="Btn-Shape-SVG1" label="SVG (*_????.svg)" imageMso="SaveAsSvg" size="normal" onAction="ExportSelectedShapeToSVG" />
 				</group>
 			</tab>
 		</tabs>
 	</ribbon>
 </customUI>
-<!-- Thank the authors of the following nice pages!
-   https://ppdtp.com/powerpoint/macro-custom-ui/
-   https://www.ka-net.org/blog/?p=11361
--->
